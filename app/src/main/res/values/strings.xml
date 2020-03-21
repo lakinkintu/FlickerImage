@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FlickerJosh</string>
+    <string name="searchtag">Search TAGs</string>
+    <string name="no_connection">No Internate connection</string>
+</resources>
