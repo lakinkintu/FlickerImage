@@ -27,7 +27,7 @@ public class TagViewPager extends PagerAdapter {
         View view = LayoutInflater.from(container.getContext()).inflate(R.layout.tag_pager_adapter, container, false);
         ImageView imageView = view.findViewById(R.id.imageView);
         String completeUrl = "https://farm" + tagImageList.get(position).getFarm() + ".staticflickr.com/" + tagImageList.get(position).getServer() + "/" + tagImageList.get(position).getId() + "_" + tagImageList.get(position).getSecret() + ".jpg";
-        Picasso.get().load(completeUrl).into(imageView);
+        Picasso.get().load(completeUrl).placeholder(R.drawable.flickerimage).into(imageView);
         container.addView(view);
         return view;
     }
