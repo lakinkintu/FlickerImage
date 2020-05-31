@@ -37,7 +37,7 @@ public class ImageRecycleAdapter extends RecyclerView.Adapter<ImageRecycleAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String completeUrl = "https://farm" + tagImageList.get(position).getFarm() + ".staticflickr.com/" + tagImageList.get(position).getServer() + "/" + tagImageList.get(position).getId() + "_" + tagImageList.get(position).getSecret() + ".jpg";
         //Log.d("TAG", completeUrl);
-        Picasso.get().load(completeUrl).into(holder.tagImage);
+        Picasso.get().load(completeUrl).placeholder(R.drawable.flickerimage).into(holder.tagImage);
         holder.tagTitle.setText(tagImageList.get(position).getTitle());
         holder.tagImage.setOnClickListener(new View.OnClickListener() {
             @Override
